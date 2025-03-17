@@ -8,5 +8,4 @@ target "build" {
     "linux/amd64",
     "linux/arm64"
   ]
-  tags = ["felixbeer/docker-latex:latest"]
 }
