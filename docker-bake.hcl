@@ -7,6 +7,6 @@ target "build" {
   platforms = [
     "linux/amd64",
     "linux/arm64"
-  ],
-  tags = ["felixbeer/docker-latex:latest"],
+  ]
+  tags = ["felixbeer/docker-latex:latest"]
 }
