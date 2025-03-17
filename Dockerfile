@@ -155,7 +155,7 @@ EOF
 #! Install `latexindent` and `latexmk` dependencies
 RUN <<EOF
 apt update -y
-apt install -y --no-install-recommends cpanminus
+apt install -y --no-install-recommends cpanminus build-essential
 cpanm -n -q Log::Log4perl XString Log::Dispatch::File YAML::Tiny File::HomeDir Unicode::GCString
 EOF
 
