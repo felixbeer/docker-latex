@@ -1,0 +1,110 @@
+{
+  "image": "ghcr.io/felixbeer/docker-latex:latest",
+  "name": "LaTeX",
+  "features": {
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
+  },
+  // "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "aaron-bond.better-comments",
+        "shardulm94.trailing-spaces",
+        "stkb.rewrap",
+        "valentjn.vscode-ltex"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.tex": "latex"
+        },
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "pdflatex ➞ biber ➞ pdflatex`×2",
+            "tools": ["pdflatex", "biber", "pdflatex", "pdflatex"]
+          },
+          {
+            "name": "xelatex ➞ biber ➞ xelatex`×2",
+            "tools": ["xelatex", "biber", "xelatex", "xelatex"]
+          },
+          {
+            "name": "latexmk",
+            "tools": ["latexmk"]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-shell-escape",
+              "-file-line-error",
+              "-pdf",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ],
+            "env": {}
+          },
+          {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "%DOC%"
+            ],
+            "env": {}
+          },
+          {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-shell-escape",
+              "%DOC%"
+            ],
+            "env": {}
+          },
+          {
+            "name": "biber",
+            "command": "biber",
+            "args": ["%DOCFILE%"]
+          }
+        ],
+        // region chktex
+        "latex-workshop.linting.chktex.enabled": true,
+        "latex-workshop.linting.chktex.exec.path": "/usr/local/bin/chktex",
+        // endregion
+        // region latexindent
+        "latex-workshop.latexindent.enabled": true,
+        //* This needs to be left as the command because the installation
+        //*   location varies across architecture builds
+        "latex-workshop.latexindent.exec.path": "latexindent",
+        "latex-workshop.formatting.latexindent.args": [
+          "-c",
+          "%DIR%/",
+          "%TMPFILE%",
+          "-y=defaultIndent: '%INDENT%'"
+        ],
+        "ltex.additionalRules.enablePickyRules": true,
+        "ltex.additionalRules.motherTongue": "de-AT",
+        "ltex.completionEnabled": true,
+        "ltex.enabled": ["latex", "markdown"],
+        // endregion
+        // region syntex
+        "latex-workshop.synctex.afterBuild.enabled": true
+        // endregion
+      }
+    }
+  },
+  "remoteUser": "root"
+}
