@@ -177,7 +177,7 @@ deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy-backports main restrict
 INNER_EOF
 apt update
 apt install libc6:amd64 -y
-apt install zlib1g -y
+apt install zlib1g zlib1g-dev -y
 EOF
 
 #! Update the TexLive package manager and minimal packages
