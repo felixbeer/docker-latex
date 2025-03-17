@@ -155,8 +155,8 @@ EOF
 #! Install `latexindent` and `latexmk` dependencies
 RUN <<EOF
 apt update -y
-apt install -y --no-install-recommends cpanminus build-essential
-cpanm -n -q Log::Log4perl XString Log::Dispatch::File YAML::Tiny File::HomeDir Unicode::GCString
+apt install -y --no-install-recommends cpanminus build-essential libdist-checkconflicts-perl liblog-log4perl-perl libxstring-perl liblog-dispatch-perl libyaml-tiny-perl libfile-homedir-perl libunicode-linebreak-perl
+# cpanm -n -q Log::Log4perl XString Log::Dispatch::File YAML::Tiny File::HomeDir Unicode::GCString
 EOF
 
 #! Cleanup
