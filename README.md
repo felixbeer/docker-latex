@@ -1,6 +1,6 @@
 # docker-latex ✍️
 
-Latex docker container with TexLive 2025.
+LaTeX docker container with TexLive 2025.
 It also installs a handful of useful packages to get started quickly.
 
 This image is based on the [jumchovej/devcontainers template](https://github.com/jmuchovej/devcontainers/tree/main)
