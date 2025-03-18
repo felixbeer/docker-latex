@@ -160,25 +160,10 @@ apt install -y --no-install-recommends cpanminus build-essential libdist-checkco
 EOF
 
 #! Cleanup
-#RUN <<EOF
-#apt autoclean
-#apt autoremove -y
-#rm -rf /var/lib/{apt,dpkg,cache,log}/
-#EOF
-
-#! Install LTEX requirements for ARM64
 RUN <<EOF
-dpkg --add-architecture amd64
-cat > /etc/apt/sources.list.d/amd64.list <<INNER_EOF
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy main restricted multiverse
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy-updates main restricted multiverse
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy-security main restricted multiverse
-deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ jammy-backports main restricted multiverse
-INNER_EOF
-apt update
-apt install libc6:amd64 -y
-apt install zlib1g zlib1g-dev zlib1g:i386 -y
-apt install lib64z1 lib32z1 -y
+apt autoclean
+apt autoremove -y
+rm -rf /var/lib/{apt,dpkg,cache,log}/
 EOF
 
 #! Update the TexLive package manager and minimal packages

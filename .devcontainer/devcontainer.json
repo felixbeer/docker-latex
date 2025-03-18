@@ -2,7 +2,8 @@
   "image": "ghcr.io/felixbeer/docker-latex:latest",
   "name": "LaTeX",
   "features": {
-    "ghcr.io/devcontainers/features/git-lfs:1": {}
+    "ghcr.io/devcontainers/features/git-lfs:1": {},
+    "ghcr.io/devcontainers/features/java:1": {}
   },
   // "workspaceFolder": "/workspace",
   "customizations": {
@@ -99,6 +100,7 @@
         "ltex.additionalRules.motherTongue": "de-AT",
         "ltex.completionEnabled": true,
         "ltex.enabled": ["latex", "markdown"],
+        "ltex.java.path": "/usr/local/sdkman/candidates/java/current",
         // endregion
         // region syntex
         "latex-workshop.synctex.afterBuild.enabled": true
