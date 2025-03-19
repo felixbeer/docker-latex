@@ -160,11 +160,11 @@ apt install -y --no-install-recommends cpanminus build-essential libdist-checkco
 EOF
 
 #! Cleanup
-RUN <<EOF
-apt autoclean
-apt autoremove -y
-rm -rf /var/lib/{apt,dpkg,cache,log}/
-EOF
+# RUN <<EOF
+# apt autoclean
+# apt autoremove -y
+# rm -rf /var/lib/{apt,dpkg,cache,log}/
+# EOF
 
 #! Update the TexLive package manager and minimal packages
 RUN <<EOF
