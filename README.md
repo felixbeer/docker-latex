@@ -46,3 +46,4 @@ You can specify additional LaTeX packages in the `.devcontainer/devcontainer.jso
 - caption
 - float
 - minted
+- texcount
