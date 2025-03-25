@@ -98,6 +98,8 @@
           "%TMPFILE%",
           "-y=defaultIndent: '%INDENT%'"
         ],
+        "latex-workshop.formatting.latex": "latexindent",
+        "editor.wordWrap": "on",
         "ltex.additionalRules.enablePickyRules": true,
         "ltex.additionalRules.motherTongue": "de-AT",
         "ltex.completionEnabled": true,
