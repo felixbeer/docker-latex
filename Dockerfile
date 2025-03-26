@@ -4,7 +4,7 @@ ARG CHKTEX_VERSION=1.7.9
 # renovate: datasource=custom.texlive depName=texlive
 ARG TEXLIVE_VERSION=2025
 
-ARG ADDITIONAL_PACKAGES="upquote babel-german german breakurl times courier relsize biblatex xkeyval bigfoot xstring frankenstein csquotes acronym biblatex-chicago lineno biber appendix makecell subfig caption float minted texcount adjustbox multirow"
+ARG ADDITIONAL_PACKAGES="upquote babel-german german breakurl times courier relsize biblatex xkeyval bigfoot xstring frankenstein csquotes acronym biblatex-chicago lineno biber appendix makecell subfig caption float minted texcount adjustbox multirow svg"
 
 ARG TEXDIR="/usr/local/texlive"
 ARG TEXUSERDIR="/texlive-user"
