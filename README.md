@@ -47,3 +47,5 @@ You can specify additional LaTeX packages in the `.devcontainer/devcontainer.jso
 - float
 - minted
 - texcount
+- adjustbox
+- multirow
