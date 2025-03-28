@@ -49,3 +49,4 @@ You can specify additional LaTeX packages in the `.devcontainer/devcontainer.jso
 - texcount
 - adjustbox
 - multirow
+- rsfs
