@@ -27,6 +27,10 @@ SHELL [ "/bin/bash", "-c" ]
 
 WORKDIR /tmp/chktex-builder
 
+RUN apt update -y && apt install -y --no-install-recommends \
+    libncurses-dev \
+ && rm -rf /var/lib/apt/lists/*
+
 RUN curl -qfL -o- "${CHKTEX_MIRROR}/chktex-${CHKTEX_VERSION}.tar.gz" \
     | tar xz --strip-components 1
 
